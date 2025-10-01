@@ -1,0 +1,1 @@
+conseguir cadastrar um nome a um cnpj, para isso
