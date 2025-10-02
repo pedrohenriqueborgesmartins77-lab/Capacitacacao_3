@@ -1,7 +1,7 @@
 import { FastifyRequest, FastifyReply } from 'fastify';
 import { ZodError } from 'zod';
 import { createRequestContext } from '../../utils/requestContext'; // Este utilitário continua igual
-import { getContato } from '../../services/insights/Contato';
+import { getContato } from '../../services/Contato';
 import { getContatoSchema } from '../../schemas/endpoints/contatoSchema';
 
 // Tipagem para os parâmetros da rota e da query string para o Fastify

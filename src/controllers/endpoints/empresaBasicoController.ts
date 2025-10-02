@@ -1,6 +1,6 @@
 import { FastifyRequest, FastifyReply } from 'fastify';
 import { z } from 'zod';
-import { getEmpresaBasico } from '../../services/insights/empresaBasico';
+import { getEmpresaBasico } from '../../services/empresaBasico';
 import { createRequestContext } from '../../utils/requestContext';
 
 // Define um schema para validar os parâmetros da URL

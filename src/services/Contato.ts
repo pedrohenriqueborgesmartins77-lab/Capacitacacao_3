@@ -1,13 +1,13 @@
-import { getDddInfo } from '../../clients/getddd';
-import { getHolidaysInfo } from '../../clients/getFeriados';
-import { ContatoDto, FeriadosDto } from '../../dtos/Dtos';
-import { mapDddToInfo, mapFeriados } from '../../mappers/contatoMapper';
+import { getDddInfo } from '../clients/getddd';
+import { getHolidaysInfo } from '../clients/getFeriados';
+import { ContatoDto, FeriadosDto } from '../dtos/Dtos';
+import { mapDddToInfo, mapFeriados } from '../mappers/contatoMapper';
 
-import { withRetry } from '../../policies/retry';
-import { withTimeout } from '../../policies/timeout';
-import { getFromCache, setInCache } from '../../utils/cache';
-import { RequestContext } from '../../utils/requestContext';
-import { safePromise } from '../../utils/safePromise';
+import { withRetry } from '../policies/retry';
+import { withTimeout } from '../policies/timeout';
+import { getFromCache, setInCache } from '../utils/cache';
+import { RequestContext } from '../utils/requestContext';
+import { safePromise } from '../utils/safePromise';
 
 const CACHE_TTL_SECONDS = 3600; // 1 hora
 

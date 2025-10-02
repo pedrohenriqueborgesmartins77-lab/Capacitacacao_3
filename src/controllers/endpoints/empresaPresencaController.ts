@@ -1,7 +1,7 @@
 import { FastifyRequest, FastifyReply } from 'fastify';
 import { z } from 'zod';
 import { createRequestContext } from '../../utils/requestContext';
-import { getEmpresaPresenca } from '../../services/insights/empresaPresenca';
+import { getEmpresaPresenca } from '../../services/empresaPresenca';
 
 // Define um schema para validar os parâmetros da URL
 const paramsSchema = z.object({

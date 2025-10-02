@@ -1,16 +1,16 @@
-import { getFromCache, setInCache } from '../../utils/cache';
-import { RequestContext } from '../../utils/requestContext';
-import { safePromise } from '../../utils/safePromise';
-import { EmpresaBasicoDto } from '../../dtos/Dtos';
-import { mapCnpjToEmpresa, mapCepToEndereco } from '../../mappers/empresaBasicoMapper';
-import { withRetry } from '../../policies/retry';
-import { withTimeout } from '../../policies/timeout';
+import { getFromCache, setInCache } from '../utils/cache';
+import { RequestContext } from '../utils/requestContext';
+import { safePromise } from '../utils/safePromise';
+import { EmpresaBasicoDto } from '../dtos/Dtos';
+import { mapCnpjToEmpresa, mapCepToEndereco } from '../mappers/empresaBasicoMapper';
+import { withRetry } from '../policies/retry';
+import { withTimeout } from '../policies/timeout';
 
 // --- ASSUMPTIONS ---
 // Os clients abaixo já existem e retornam os tipos inferidos nos mappers.
 // Eles são injetados ou importados de um caminho conhecido.
-import { getCnpjInfo } from '../../clients/getCnpj'; 
-import { getCepInfo } from '../../clients/getCep';   
+import { getCnpjInfo } from '../clients/getCnpj'; 
+import { getCepInfo } from '../clients/getCep';   
 
 const CACHE_TTL_SECONDS = 3600; // 1 hora
 
